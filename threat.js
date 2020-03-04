@@ -21,7 +21,7 @@ class Parse {
         this.enemies = report['enemies'];
 
         this.encounters = report['fights'].filter((fight) => {
-            return (fight['boss'] && fight['kill']);
+            return (fight['boss']);
         }).map((fight) => {
             return new Encounter(this.reportCode, fight);
         });
